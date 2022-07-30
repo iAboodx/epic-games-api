@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Games - Epic Games</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1764px-Epic_Games_logo.svg.png">
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+        body {
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(to right, #BE93C5, #7BC6CC);
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .container {
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card {
+            width: 390px;
+            height: 450px;
+            margin: 10px;
+            background: linear-gradient(to right, #BE93C5, #7BC6CC);
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px #00000075;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .card p {
+            display: block;
+            transition: all 0.2s ease-in-out;
+            position: absolute;
+            background-color: transparent;
+            top: -25%;
+            border-radius: 10px 10px 0 0;
+            padding: 25px;
+            color: transparent;
+            left: 0;
+            font-size: .9rem;
+        }
+
+        .card:hover p {
+            background-color: #00000075;
+            backdrop-filter: blur(10px);
+            color: white;
+            height: auto;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h3 {
+            font-size: .9rem;
+            text-align: center;
+        }
+
+        .card h3:nth-child(2) {
+            color: #00000075;
+        }
+
+        .card-header span {
+            position: absolute;
+            top: 53%;
+            left: 40%;
+            font-size: .7rem;
+            color: #000000;
+            background-color: aquamarine;
+            padding: 3px 15px;
+            border-radius: 100px;
+        }
+
+        .cards img {
+            border-radius: 15px;
+            outline: 2px solid #ffffff49;
+            border: 3px solid transparent;
+            position: relative;
+            top: -15%;
+        }
+
+        .comingsoon img {
+            border-radius: 15px;
+            outline: 2px solid #ffffff49;
+            border: 3px solid transparent;
+            position: relative;
+            top: -15%;
+        }
+
+        .card a {
+            font-size: .9rem;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ffffff75;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+
+        .available {
+            background-color: #00000075;
+            outline: 2px solid #ffffff49;
+            border: 3px solid transparent;
+            border-radius: 25px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 25px;
+            height: 100%;
+            margin-top: 50px;
+        }
+
+        .available h1 {
+            color: white;
+            margin-bottom: 90px;
+        }
+
+        .comingsoon-cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .comingsoon {
+            background-color: #0000002c;
+            outline: 2px solid #ffffff49;
+            backdrop-filter: blur(30px);
+            border: 3px solid transparent;
+            border-radius: 25px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 25px;
+            margin-top: 25px;
+            margin-bottom: 155px;
+            height: 100%;
+        }
+
+        .comingsoon h1 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 90px;
+        }
+
+        .waves {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            opacity: 1;
+            background: linear-gradient(to right, #be93c5, #7bc6cc);
+            margin-left: -250px;
+            margin-top: -250px;
+            transform-origin: 50% 48%;
+            border-radius: 43%;
+            animation: drift 3000ms infinite linear;
+            z-index: -3;
+            overflow: hidden;
+        }
+
+        .st {
+            position: fixed;
+            top: 20%;
+            left: -10%;
+            width: 1500px;
+            overflow: hidden;
+            height: 1500px;
+            animation: drift 12s infinite linear;
+            background: linear-gradient(to right, #be93c5, #7bc6cc);
+        }
+
+        .th {
+            position: fixed;
+            top: 20%;
+            left: 65%;
+            width: 1500px;
+            height: 1500px;
+            animation: drift 15s infinite linear;
+            background: linear-gradient(to right, #be93c5, #7bc6cc);
+
+        }
+
+        @keyframes drift {
+            from {
+                transform: rotate(0deg);
+            }
+
+            from {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="waves st"></div>
+    <div class="waves th"></div>
+    <div class="container">
+        <div class="available">
+            <h1 class="av">Available Now</h1>
+            <div class="cards">
+
+            </div>
+        </div>
+        <div class="comingsoon">
+            <h1>UP Coming</h1>
+            <div class="comingsoon-cards">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        window.onload = getgames()
+        window.onload = upcoming()
+        function getgames() {
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '013b1a87f7msh7fa82ae206d7660p1e03dejsnf29ec954d8ac',
+                    'X-RapidAPI-Host': 'free-epic-games.p.rapidapi.com'
+                }
+            };
+            const errdiv = document.querySelector('.cards');
+            const nodata = document.querySelector('av');
+            // change the text from nodata
+            fetch('https://free-epic-games.p.rapidapi.com/free', options)
+                .then(response => response.json())
+                .then(response => response.freeGames.current.forEach(async game => {
+                    const date = new Date(game.price.lineOffers[0].appliedRules[0].endDate);
+
+
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    const cards = document.querySelector('.cards');
+                    card.innerHTML = `
+                    <img width="220pxs" src="${game.keyImages[1].url}" alt="NO IMG">
+                    <div class="card-header">
+                        <h3>${game.title}</h3>
+                        <h3>${date.toDateString()}</h3>
+                        <span>${game.status}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>${game.description}</p>
+                        <a href="https://store.epicgames.com/en-US/p/${game.offerMappings[0].pageSlug}">Download</a>
+                    </div>
+                `;
+                    await cards.appendChild(card);
+
+                }))
+
+                .catch(err => errdiv.appendChild(nodata));
+
+        }
+        function upcoming() {
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '013b1a87f7msh7fa82ae206d7660p1e03dejsnf29ec954d8ac',
+                    'X-RapidAPI-Host': 'free-epic-games.p.rapidapi.com'
+                }
+            };
+
+            fetch('https://free-epic-games.p.rapidapi.com/free', options)
+                .then(response => response.json())
+                .then(response => response.freeGames.upcoming.forEach(async game => {
+                    const date = new Date(game.promotions.upcomingPromotionalOffers[0].promotionalOffers[0].startDate);
+                    const date2 = new Date(game.promotions.upcomingPromotionalOffers[0].promotionalOffers[0].endDate);
+
+
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    const cards = document.querySelector('.comingsoon-cards');
+                    card.innerHTML = `
+                    <img width="220pxs" src="${game.keyImages[1].url}" alt="NO IMG">
+                    <div class="card-header">
+                        <h3>${game.title}</h3>
+                        <h3>${date.toDateString()} - ${date2.toDateString()}</h3>
+                        <span>COMING SOON</span>
+                    </div>
+                    <div class="card-content">
+                        <p>${game.description}</p>
+                        <a href="https://store.epicgames.com/en-US/p/${game.offerMappings[0].pageSlug}">Download</a>
+                    </div>
+                `;
+                    await cards.appendChild(card);
+
+                }))
+                .catch(err => console.error(err));
+        }
+    </script>
+</body>
+
+</html>
